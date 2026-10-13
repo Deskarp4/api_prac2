@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
-  imports: [RouterOutlet],
+  standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
+export class AppComponent {
   protected readonly title = signal('api-app');
 }
